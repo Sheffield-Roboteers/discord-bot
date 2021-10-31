@@ -1,6 +1,6 @@
 // Required requirements and constants
 const { Client, Intents, MessageEmbed, MessageActionRow, MessageButton} = require('discord.js');
-const { token } = require('./config.json');
+const config = require('./config.json');
 const myIntents = new Intents(14031);
 
 // Create new client instance
@@ -44,8 +44,8 @@ client.on('messageCreate', async function(msg) {
         .setTimestamp()
 
         // Getting the approve and sending channels
-        const approb = client.channels.cache.get('904174714497433631');
-        const public = client.channels.cache.get('904161643439734814');
+        const approb = client.channels.cache.get(config.approveChannel);
+        const public = client.channels.cache.get(config.sendChannel);
         approb.send({embeds: [approveEmbed], components: [row]})
             .then(m => {
                 const collector = m.createMessageComponentCollector({componentType: "BUTTON", time: 600000});
@@ -63,4 +63,4 @@ client.on('messageCreate', async function(msg) {
 });
 
 //Login with token
-client.login(token);
+client.login(config.token);
