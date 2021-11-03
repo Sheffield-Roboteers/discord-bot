@@ -39,7 +39,7 @@ client.on('messageCreate', async function(msg) {
         // Embed formatting
         const approveEmbed = new MessageEmbed()
         .setColor('#0099ff')
-        .setAuthor('Anonymous Asked:')
+        .setAuthor('Anonymous Said:')
         .addField('Message Content:', msg.content, true)
         .setTimestamp()
 
@@ -48,7 +48,7 @@ client.on('messageCreate', async function(msg) {
         const public = client.channels.cache.get(config.sendChannel);
         approb.send({embeds: [approveEmbed], components: [row]})
             .then(m => {
-                const collector = m.createMessageComponentCollector({componentType: "BUTTON", time: 600000});
+                const collector = m.createMessageComponentCollector({componentType: "BUTTON"});
                 collector.on('collect', async i => {
                     if (i.customId === 'approve') {
                         public.send({embeds: [approveEmbed]});
