@@ -21,7 +21,6 @@ client.on("error", (error) => console.log(error));
  async function onReady(c) {
     console.log(`Ready! Logged in as ${c.user.tag}`);
     const channel = client.channels.cache.find((channel) => channel.id === config.roleChannel);
-  
     // channel will not contain messages after it is found
     try {
       await channel.messages.fetch();
@@ -29,6 +28,7 @@ client.on("error", (error) => console.log(error));
       console.error('Error fetching channel messages', err);
       return;
     }
+
     let msg = channel.messages.cache.last();
     
     if(config.reactMessage === msg.id) {
@@ -104,6 +104,11 @@ client.on('messageCreate', async function(msg) {
         console.error('Error fetching message', err);
         return;
       }
+    }
+
+    if (config.emojiRoleMap[_emoji] === undefined) {
+      message.reactions.cache.find(reaction => reaction.emoji == _emoji).users.remove(user.id);
+      return;
     }
   
     const { guild } = message;
