@@ -36,6 +36,7 @@ client.on("error", (error) => console.log(error));
         msg.react("🖨️");
         msg.react("🪲");
         msg.react("🐜");
+        msg.react("🤖");
         console.log(`Watching message '${msg.id}' for reactions...`);
     } else {
         console.log(`Message not found`);
