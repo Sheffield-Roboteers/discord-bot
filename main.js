@@ -36,7 +36,7 @@ client.on("error", (error) => console.log(error));
         msg.react("🖨️");
         msg.react("🪲");
         msg.react("🐜");
-        msg.react("🤖");
+        msg.react("<:robopadroleicon:1038255900714074173>");
         console.log(`Watching message '${msg.id}' for reactions...`);
     } else {
         console.log(`Message not found`);
