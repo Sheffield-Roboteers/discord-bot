@@ -1,10 +1,10 @@
-FROM node:16-alpine
+FROM node:latest
 
 WORKDIR /usr/src/bot
-COPY package.json config.json ./
+COPY package.json config.json yarn.lock ./
 
-RUN npm install 
+RUN yarn install
 
-COPY . .
+COPY . ./
 
-CMD ["node", "main.js"]
+CMD ["yarn", "start"]
