@@ -6,8 +6,7 @@
 	"test_guild_id": "dev-server-id",
     "approve_channel_id" : "approve_channel_id",
     "send_channel_id" : "send_channel_id",
-    "role_channel_id" : "role_channel_id",
-    "role_message_id" : "role_message_id",
+    "bot_guild_id" : "bot_guild_id",
     "emoji_role_map" : {
         "emoji1" : "role_1_id", 
         "emoji2" : "role_2_id",

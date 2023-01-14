@@ -5,7 +5,6 @@
  * @version 3.2.2
  */
 
-const { role_channel_id, role_message_id, emoji_role_map } = require("../config.json");
 const { ActivityType } = require("discord.js");
 
 module.exports = {
