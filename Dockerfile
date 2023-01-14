@@ -1,10 +1,10 @@
 FROM node:latest
 
 WORKDIR /usr/src/bot
-COPY package.json config.json yarn.lock ./
+COPY package.json config.json package-lock.json ./
 
-RUN yarn install
+RUN npm install
 
 COPY . ./
 
-CMD ["yarn", "start"]
+CMD ["npm","run", "start"]
