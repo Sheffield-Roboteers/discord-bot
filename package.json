@@ -1,15 +1,26 @@
 {
-  "name": "roboteersbot",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "node main.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "discord.js": "^14.6.0"
-  }
+	"name": "roboteers-discord-bot",
+	"version": "3.3.1",
+	"description": "Bot for the Roboteers Society Discord server",
+	"types": "./typings.d.ts",
+	"main": "bot.js",
+	"scripts": {
+		"start": "node bot.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NamVr/DiscordBot-Template.git"
+	},
+	"author": {
+		"name": "Sam Piper",
+		"url": "https://sampiiiii.dev",
+		"email": "hello@sampiiiii.dev"
+	},
+	"license": "GPL-3.0",
+	"dependencies": {
+		"@discordjs/rest": "^1.0.0",
+		"discord-api-types": "^0.36.2",
+		"discord.js": "^14.0.2"
+	},
+	"packageManager": "yarn@3.2.4"
 }
