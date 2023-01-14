@@ -6,7 +6,7 @@
 
 // Deconstructed the constants we need in this file.
 
-const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
+const { SlashCommandBuilder } = require("discord.js");
 
 /**
  * @type {import('../../../typings').SlashInteractionCommand}
@@ -22,6 +22,6 @@ module.exports = {
 
 	async execute(interaction) {
 		// Replies to the interaction!
-		await interaction.reply("Pong!");
+		await interaction.reply({ content: 'Secret Pong!', ephemeral: true });
 	},
 };

@@ -3,5 +3,14 @@
 	"token": "your-bot-token",
 	"owner": "owner-id",
 	"client_id": "bot-id",
-	"test_guild_id": "dev-server-id"
+	"test_guild_id": "dev-server-id",
+    "approve_channel_id" : "approve_channel_id",
+    "send_channel_id" : "send_channel_id",
+    "role_channel_id" : "role_channel_id",
+    "role_message_id" : "role_message_id",
+    "emoji_role_map" : {
+        "emoji1" : "role_1_id", 
+        "emoji2" : "role_2_id",
+        "emoji3" : "role_3_id"
+    }
 }
